@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" >
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <title>𝕻𝖍𝖔𝖗𝖊 𝕿𝖊𝖑𝖊𝖌𝖗𝖆𝖕𝖍</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="flex-container">
+<header>
+  <div class = "title">𝕻𝖍𝖔𝖗𝖊 𝕿𝖊𝖑𝖊𝖌𝖗𝖆𝖕𝖍</div>
+  <div class = "header">
+    <p>{{today}}  |  Block Height: {{block_height}}  |  PHR/USD: ${{phr_usd}}</p>
+  </div>
+  <div class="topnav">
+  <ul>
+    <!--<a class="active" href="#home">Home</a>-->
+    <a href="#home">News</a>
+    <a href="#contact">Proposal Blogs</a>
+    <a href="#dfd">Community Articles</a>
+    <a href="#news">How To</a>
+    <a href="#about">Contact</a>
+  </ul>
+</div>
+</header>
+
+<div class = "budgetinfo">
+  <h1> Budgetinfo </h1>
+  <ul>
+    <p> Monthly Budget: {{monthly_phr}} PHR | ${{monthly_usd}} USD</p>
+    <p> Next Superblock: {{next_superblock}} </p>
+    <p> Voting Deadline: {{voting_deadline}} </p>
+    <p> {{number_mn}} Masternodes </p>
+    <p> {{nb_remaining_payments}} remaining payments for {{value_remaining_payments}} PHR from past proposals </p>
+    <p> Projection budget approved: {{nb_proposals_this_month_projection}} for {{total_value_proposals_this_month_projection}}PHR </p>
+    <p> Projection Budget Total: {{total_value_proposals_projection}}/{{monthly_phr}} PHR </p>
+  </ul>
+</div>
+
+<div class="proposals">
+  <h1>New Proposals</h1>
+  {% set counter = 0 -%}
+  {% for proposal in proposals_active -%}
+  <div class="proposal">
+    <h2><a target="_blank" href="{{proposal['URL']}}">{{proposal['Name']}}</a> | {{proposal['start']}} - {{proposal['end']}}, {{proposal['TotalPayment']}} PHR </h2>
+    <ul>
+      <p> Payment Address: <a target="_blank" href="https://chainz.cryptoid.info/phr/search.dws?q={{proposal['PaymentAddress']}}"> {{proposal['PaymentAddress']}}</a> </p>
+      <p>{{proposal['MonthlyPayment']}} PHR per month, {{proposal['TotalPaymentCount']}} payment </p>
+      <p> To vote yes: mnbudgetvote many {{proposal['Hash']}} yes</p>
+      <p> To vote no: mnbudgetvote many {{proposal['Hash']}} no </p>
+    </ul>
+  <h3> Yeas: {{proposal['Yeas']}} | Nays: {{proposal['Nays']}} | Passing: {{proposal['passing']}} | Voting Deadline: {{proposal['deadline']}}</h3>
+  </div>
+  {% set counter = counter + 1 -%}
+  {% endfor -%}
+
+
+  <h1>Past Proposals</h1>
+   {% set counter = 0 -%}
+  {% for proposal in proposals_past -%}
+  <div class="proposal">
+    <h2><a target="_blank" href="{{proposal['URL']}}">{{proposal['Name']}}</a> | {{proposal['start']}} - {{proposal['end']}}, {{proposal['TotalPayment']}} PHR </h2>
+    <ul>
+      <p> Payment Address: <a target="_blank" href="https://chainz.cryptoid.info/phr/search.dws?q={{proposal['PaymentAddress']}}"> {{proposal['PaymentAddress']}}</a> </p>
+      <p>{{proposal['MonthlyPayment']}} PHR per month, {{proposal['TotalPaymentCount']}} payment </p>
+      <p> To vote yes: mnbudgetvote many {{proposal['Hash']}} yes</p>
+      <p> To vote no: mnbudgetvote many {{proposal['Hash']}} no </p>
+    </ul>
+  <h3> Yeas: {{proposal['Yeas']}} | Nays: {{proposal['Nays']}} | Accepted: {{proposal['passing']}}</h3>
+  </div>
+  {% set counter = counter + 1 -%}
+  {% endfor -%}
+</div>
+<footer>Copyright &copy; CKevin</footer>
+</div>
+
+</body>
+
+</html>

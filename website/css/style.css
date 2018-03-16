@@ -1,0 +1,310 @@
+.header{
+    border-radius: 0px;
+    text-align: center;
+    padding: 0px 0px 10px 0px;
+    font-size: 9px;
+}
+
+.title{
+	font-size: 60px;
+ 	color: #000000;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 19px;
+	margin-top: 45px;
+}
+
+p{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	/*font-family: Georgia, Times, "Times New Roman", serif;*/
+}
+
+
+/* less useful perhaps*/
+/* Add a black background color to the top navigation */
+.topnav {
+	text-align: center;
+	border-top: 2px solid black;
+	border-bottom: 1px solid gray;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.topnav ul {
+	display: inline-block;
+	list-style: none;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	margin: 5px 5px;
+	float: left;
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    padding: 4px 4px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #fff;
+    color: black;
+}
+
+
+
+.flex-container {
+	align-items: baseline;
+	margin: 0px 120px;
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 0px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.proposals {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 10px;
+    background: white;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.proposals h1 {
+	font-size: 16px;
+	font-weight: bolder;
+	font-style: italic;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+
+.proposal {
+	line-height: 2;
+	text-align: left;
+	padding: 0px 10px 5px 10px;
+	margin: 10px 0px 0px 0px;
+	/*border-bottom: 1px solid gray;*/
+	
+	border-bottom: 1px solid gray;
+}
+
+.proposal h2 {
+	font-size: 13px;
+	font-weight: 300;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	text-align: left;
+	color: black;
+}
+.proposal h2 a {
+	font-weight: 600;
+	text-decoration: none;
+	color: black;
+}
+.proposal h3 {
+	font-size: 11px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	text-align:left;
+}
+
+.proposal ul p {
+	padding: 3px 0px 0px 0px;
+}
+
+.proposal ul p a {
+	color: gray;
+	text-decoration: none;
+}
+.proposal ul p b {
+	font-weight: 600;
+}
+
+
+.budgetinfo {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 11px;
+	background: white;
+	padding: 10px;
+	margin-right: 5px;
+	width: 200px;
+}
+
+.budgetinfo h1 {
+	font-style: italic;
+	font-size: 16px;
+	font-weight: bolder;
+	margin-bottom: 8px;
+	text-align: center;
+}
+.budgetinfo ul p {
+	line-height: 1.5;
+	padding: 3px 0px 0px 0px;
+}
+
+.news {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 10px;
+	background: white;
+	padding: 10px;
+}
+@media all and (min-width: 768px) {
+    header {-webkit-order:1;order:1;} 
+    .budgetinfo {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:2;order:2;}
+    /*.proposals {text-align:left;-webkit-flex: 5 auto;flex:5 0px;-webkit-order:2;order:2;}*/
+    .proposals {-webkit-flex:5 0px;flex:5 0px;-webkit-order:3;order:3;}
+    .news {-webkit-flex:5 0px;flex:5 0px;-webkit-order:4;order:4;}
+    footer {-webkit-order:5;order:5;}
+
+}
+
+
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+} */
+
+
+header {background: white;color:black;}
+footer {background: white;color:black;}
+/*h1{
+  font-size: 20px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}*/
+
+/*body{
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+}*/
+/*
+.collapsible {
+	color: #000000;
+  	font: 11px Courier;
+  background-color: #eee;
+  cursor: pointer;
+  padding: 0px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+
+}
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+*/
+
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+  word-break:break-all;
+}
+th{
+  padding: 20px 15px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 12px;
+  color: black;
+  word-break: break-all;
+}
+td{
+  padding: 20px 30px;
+  text-align: center;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: black;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+  word-break: break-all;
+}
+
+
+/*
+ol {
+    margin-left: 2em;
+}
+
+ol li {
+    list-style-type: decimal;
+    list-style-position: outside;
+}
+
+ol ul{
+  margin-left: 2em;
+}
+
+ul li {
+  list-style-type: circle;
+  list-style-position: outside;
+}
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+/*body{
+  background-image: url("background.png");
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+*/
+
+section{
+  margin: 50px;
+}
+
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
